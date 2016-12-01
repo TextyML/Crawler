@@ -14,7 +14,7 @@ class NewsSpider(CrawlSpider):
                 return downloadLink[1]
 
     def get_links(self, siteName):
-        with open("download.json") as dl:
+        with open("download.txt") as dl:
             downloadlist = json.load(dl)
 
         linklist = [site["links"] for site in downloadlist if site["name"] == siteName][0]
