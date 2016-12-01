@@ -18,5 +18,5 @@ class NewsSpider(CrawlSpider):
             downloadlist = json.load(dl)
 
         linklist = [site["links"] for site in downloadlist if site["name"] == siteName][0]
-        self.downloadList = [[link["url"], link["tags"]] for link in linklist[:7]]
+        self.downloadList = [[link["url"], link["tags"]] for link in linklist]
         self.start_urls = [row[0] for row in self.downloadList]

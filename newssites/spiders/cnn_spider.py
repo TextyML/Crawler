@@ -3,9 +3,8 @@ from newssites.items import NewssitesItem
 from bs4 import BeautifulSoup
 
 
-class CNNNewsSpider(NewsSpider):
+class CNNSpider(NewsSpider):
     name = "cnn"
-    #allowed_domains = ["edition.cnn.com", "money.cnn.com/"]
 
     def __init__(self, *a, **kw):
         super().__init__(*a, **kw)
@@ -16,14 +15,31 @@ class CNNNewsSpider(NewsSpider):
 
         item = NewssitesItem()
         item["tags"] = self.get_tags(response.url)
-        if "edition.cnn.com" in response.url:
-            item["title"] = response.xpath('.//h1[@class="pg-headline"]/text()').extract()[0]
-            item["abstract"] = response.xpath('.//p[@class="zn-body__paragraph"]/text()').extract()[0]
-            text = ""
 
-            for paragraph in response.xpath('.//div[@class="zn-body__paragraph"]').extract():
-                soup = BeautifulSoup(paragraph, 'html.parser').get_text() + "\n"
-                if not any(x in soup.lower() for x in ["related:", "read:"]):
-                    text += soup
-            item["text"] = text
+        extractor = {
+            "title": "//meta[@property=\"og:title\"]/@content",
+            "abstract": "//meta[@property=\"og:description\"]/@content",
+            "edition": {
+                "paragraph": ".//div[@class=\"zn-body__paragraph\"]"
+            },
+            "money": {
+                "paragraph": ".//div[@id=\"storytext\"]/p"
+            }
+        }
+
+        if "edition.cnn.com" in response.url:
+            pattern = extractor["edition"]
+        else:
+            pattern = extractor["money"]
+
+        item["title"] = response.xpath(extractor["title"]).extract()[0]
+        item["abstract"] = response.xpath(extractor["abstract"]).extract()[0]
+        text = ""
+
+        for paragraph in response.xpath(pattern["paragraph"]).extract():
+            soup = BeautifulSoup(paragraph, 'html.parser').get_text() + "\n"
+            if not any(x in soup.lower() for x in ["related:", "read:"]):
+                text += soup
+        item["text"] = text
+
         yield item

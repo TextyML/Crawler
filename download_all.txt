@@ -2,21 +2,147 @@
   {
     "links": [
       {
-        "url": "http://www.bbc.com/sport/football/37908505",
-        "tags": [
-          "sport"
-        ]
-      },
-      {
         "url": "http://www.bbc.com/news/business-37902922",
         "tags": [
           "economy"
         ]
       },
       {
+        "url": "http://www.bbc.com/news/business-37891734",
+        "tags": [
+          "economy"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/business-37860880",
+        "tags": [
+          "economy"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/business-23050597",
+        "tags": [
+          "economy"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/business-37906742",
+        "tags": [
+          "economy"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/uk-scotland-37909299",
+        "tags": [
+          "politics"
+        ]
+      },
+      {
         "url": "http://www.bbc.com/news/election-us-2016-37904843",
         "tags": [
           "politics"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/uk-politics-37870930",
+        "tags": [
+          "politics"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/uk-politics-37851551",
+        "tags": [
+          "politics"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/uk-politics-37909337",
+        "tags": [
+          "politics"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/science-environment-37861015",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/science-environment-37872111",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/science-environment-37823909",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/science-environment-37722026",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/science-environment-37893804",
+        "tags": [
+          "science"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/sport/football/37908505",
+        "tags": [
+          "sport"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/sport/basketball/37906636",
+        "tags": [
+          "sport"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/sport/formula1/37861016",
+        "tags": [
+          "sport"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/sport/tennis/37882468",
+        "tags": [
+          "sport"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/sport/rugby-union/37908182",
+        "tags": [
+          "sport"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/technology-37908915",
+        "tags": [
+          "tech"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/technology-37908919",
+        "tags": [
+          "tech"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/technology-37908975",
+        "tags": [
+          "tech"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/technology-37903587",
+        "tags": [
+          "tech"
         ]
       },
       {
@@ -30,7 +156,26 @@
         "tags": [
           "business"
         ]
-      }
+      },
+      {
+        "url": "http://www.bbc.com/news/business-37914853",
+        "tags": [
+          "business"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/uk-england-37921236",
+        "tags": [
+          "business"
+        ]
+      },
+      {
+        "url": "http://www.bbc.com/news/world-europe-37910431",
+        "tags": [
+          "business"
+        ]
+      },
+      {"url": "http://www.bbc.com/news/business-37893503", "tags": [ "business" ]}
     ],
     "name": "bbc"
   },
@@ -748,7 +893,55 @@
         ]
       },
       {
+        "url": "http://money.cnn.com/2016/11/09/investing/markets-donald-trump-hillary-clinton/index.html",
+        "tags": [
+          "economy"
+        ]
+      },
+      {
+        "url": "http://money.cnn.com/2016/11/09/news/economy/india-rupee-notes-bank-shutdown/index.html",
+        "tags": [
+          "economy"
+        ]
+      },
+      {
+        "url": "http://money.cnn.com/2016/11/07/news/economy/california-marijuana-tax/index.html",
+        "tags": [
+          "economy"
+        ]
+      },
+      {
+        "url": "http://money.cnn.com/2016/11/08/news/economy/iran-total-south-pars-gas/index.html",
+        "tags": [
+          "economy"
+        ]
+      },
+      {
         "url": "http://edition.cnn.com/2016/11/07/fashion/military-style-invades-fashion/index.html",
+        "tags": [
+          "lifestyle"
+        ]
+      },
+      {
+        "url": "http://edition.cnn.com/2016/11/06/design/north-korea-subway-commute/index.html",
+        "tags": [
+          "lifestyle"
+        ]
+      },
+      {
+        "url": "http://edition.cnn.com/2016/10/31/arts/wartime-photos-transformed-into-ghostly-fantasies/index.html",
+        "tags": [
+          "lifestyle"
+        ]
+      },
+      {
+        "url": "http://edition.cnn.com/2016/10/31/world/van-gogh-ear-slash-motive-trnd/index.html",
+        "tags": [
+          "lifestyle"
+        ]
+      },
+      {
+        "url": "http://edition.cnn.com/2016/10/25/architecture/bahai-temple-chile/index.html",
         "tags": [
           "lifestyle"
         ]
@@ -760,7 +953,55 @@
         ]
       },
       {
+        "url": "http://edition.cnn.com/2016/10/28/opinions/the-bathroom-issue-were-not-talking-about/index.html",
+        "tags": [
+          "opinion"
+        ]
+      },
+      {
+        "url": "http://edition.cnn.com/2016/10/28/opinions/1945-world-series-lauder/index.html",
+        "tags": [
+          "opinion"
+        ]
+      },
+      {
+        "url": "http://edition.cnn.com/2015/04/29/opinions/david-love-thugs-riot-shaming/index.html",
+        "tags": [
+          "opinion"
+        ]
+      },
+      {
+        "url": "http://edition.cnn.com/2015/05/13/opinions/love-move-bombing-anniversary/index.html",
+        "tags": [
+          "opinion"
+        ]
+      },
+      {
         "url": "http://edition.cnn.com/2016/11/07/politics/nasa-astronaut-space-vote-election-2016/index.html",
+        "tags": [
+          "politics"
+        ]
+      },
+      {
+        "url": "http://edition.cnn.com/2016/10/08/world/russia-veto-syria-un-resolution/index.html",
+        "tags": [
+          "politics"
+        ]
+      },
+      {
+        "url": "http://edition.cnn.com/2016/04/10/politics/john-kerry-g7-no-apology-hiroshima/index.html",
+        "tags": [
+          "politics"
+        ]
+      },
+      {
+        "url": "http://edition.cnn.com/2016/11/08/politics/evan-bayh-todd-young-indiana-senate-election-results/index.html",
+        "tags": [
+          "politics"
+        ]
+      },
+      {
+        "url": "http://edition.cnn.com/2016/11/05/politics/girls-on-the-bus-how-things-have-change-gloria-borger/index.html",
         "tags": [
           "politics"
         ]
@@ -772,13 +1013,85 @@
         ]
       },
       {
+        "url": "http://edition.cnn.com/2016/11/08/sport/santiago-lange-cancer-survivor-sailing-awards/index.html",
+        "tags": [
+          "sport"
+        ]
+      },
+      {
+        "url": "http://edition.cnn.com/2016/11/02/golf/golf-korea-pak-park/index.html",
+        "tags": [
+          "sport"
+        ]
+      },
+      {
+        "url": "http://edition.cnn.com/2016/11/04/sport/valkenswaard-united-gcl-team-champions/index.html",
+        "tags": [
+          "sport"
+        ]
+      },
+      {
+        "url": "http://edition.cnn.com/2016/10/22/sport/all-blacks-record-bledisloe/index.html",
+        "tags": [
+          "sport"
+        ]
+      },
+      {
         "url": "http://money.cnn.com/2016/11/04/technology/google-snapchat-investment/index.html",
         "tags": [
           "tech"
         ]
       },
       {
+        "url": "http://money.cnn.com/2016/11/04/technology/apple-dongle-price-cuts-macbook-pro/index.html",
+        "tags": [
+          "tech"
+        ]
+      },
+      {
+        "url": "http://money.cnn.com/2016/11/04/technology/nintendo-nes-classic-edition-review/index.html",
+        "tags": [
+          "tech"
+        ]
+      },
+      {
+        "url": "http://money.cnn.com/2016/11/08/technology/hyperloop-dubai-abu-dhabi/index.html",
+        "tags": [
+          "tech"
+        ]
+      },
+      {
+        "url": "http://money.cnn.com/2016/11/01/technology/android-google-harry-potter-spells/index.html",
+        "tags": [
+          "tech"
+        ]
+      },
+      {
         "url": "http://money.cnn.com/2016/11/08/technology/gopro-karma-recall/index.html?iid=SF_LN",
+        "tags": [
+          "business"
+        ]
+      },
+      {
+        "url": "http://money.cnn.com/2016/11/08/investing/hertz-stock-earnings/index.html?iid=SF_LN",
+        "tags": [
+          "business"
+        ]
+      },
+      {
+        "url": "http://money.cnn.com/2016/11/08/news/tesla-factory-germany-grohmann-engineering/index.html",
+        "tags": [
+          "business"
+        ]
+      },
+      {
+        "url": "http://money.cnn.com/2016/11/09/news/companies/gm-layoffs/index.html?iid=SF_LN",
+        "tags": [
+          "business"
+        ]
+      },
+      {
+        "url": "http://money.cnn.com/2016/11/08/investing/cvs-earnings-stock-walgreens/index.html?iid=SF_River",
         "tags": [
           "business"
         ]
