@@ -3,8 +3,8 @@ from newssites.items import NewssitesItem
 from bs4 import BeautifulSoup
 
 
-class BuzzfeedSpider(NewsSpider):
-    name = "buzzfeed"
+class HuffingtonSpider(NewsSpider):
+    name = "huffington"
 
     def __init__(self, *a, **kw):
         super().__init__(*a, **kw)
@@ -17,9 +17,9 @@ class BuzzfeedSpider(NewsSpider):
         item["tags"] = self.get_tags(response.url)
 
         pattern = {
-                "title": "//meta[@property='og:title']/@content",
+                "title": "//h1[@class='headline__title']/text()",
                 "abstract": "//meta[@property='og:description']/@content",
-                "paragraph": "//div[contains(@class, 'article-body-text')]/div[contains(@class,'component-content')]/p"
+                "paragraph": "//div[contains(@class,'entry__body')]/div[contains(@class,'text')]/p"
         }
 
         item["title"] = response.xpath(pattern["title"]).extract()[0]
