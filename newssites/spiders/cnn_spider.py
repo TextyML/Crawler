@@ -1,5 +1,4 @@
 from ..NewsSpider import NewsSpider
-from newssites.items import NewssitesItem
 from bs4 import BeautifulSoup
 
 
@@ -13,8 +12,8 @@ class CNNSpider(NewsSpider):
     def parse(self, response):
         self.log("Scraping: " + response.url)
 
-        item = NewssitesItem()
-        item["tags"] = self.get_tags(response.url)
+        item = self.get_item(response.url)
+
 
         extractor = {
             "title": "//meta[@property=\"og:title\"]/@content",
@@ -37,9 +36,16 @@ class CNNSpider(NewsSpider):
         text = ""
 
         for paragraph in response.xpath(pattern["paragraph"]).extract():
-            soup = BeautifulSoup(paragraph, 'html.parser').get_text() + "\n"
-            if not any(x in soup.lower() for x in ["related:", "read:"]):
-                text += soup
+            soup = BeautifulSoup(paragraph, 'html.parser')
+            garbage = False
+            if not any(x in soup.get_text().lower() for x in ["related:", "read:"]):
+                garbage = True
+
+            if soup.find('em'):
+                garbage = True
+
+            if not garbage:
+                text += soup.get_text() + "\n"
         item["text"] = text
 
         yield item

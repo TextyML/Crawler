@@ -1,5 +1,4 @@
 from ..NewsSpider import NewsSpider
-from newssites.items import NewssitesItem
 from bs4 import BeautifulSoup
 
 
@@ -13,8 +12,7 @@ class GuardianSpider(NewsSpider):
     def parse(self, response):
         self.log("Scraping: " + response.url)
 
-        item = NewssitesItem()
-        item["tags"] = self.get_tags(response.url)
+        item = self.get_item(response.url)
 
         pattern = {
                 "title": "//meta[@property='og:title']/@content",

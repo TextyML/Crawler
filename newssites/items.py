@@ -15,3 +15,4 @@ class NewssitesItem(scrapy.Item):
     text = scrapy.Field()
     abstract = scrapy.Field()
     tags = scrapy.Field()
+    url = scrapy.Field()
