@@ -1,3 +1,4 @@
+from bs4 import BeautifulSoup
 from scrapy.spiders import CrawlSpider
 from newssites.items import NewssitesItem
 import json
@@ -20,13 +21,38 @@ class NewsSpider(CrawlSpider):
             if downloadLink[0] == url:
                 return downloadLink[1]
 
-    def find_tag(self, soup, tag):
-        if soup.find(tag):
+    def find_tags(self, soup, tags):
+        if soup.find(tags):
             return True
-        return
+        return False
 
-    def extract_tag(self, soup, tag):
-        pass
+    def find_words(self, soup, words):
+        if any(x in soup.get_text().lower() for x in words):
+            return True
+        return False
+
+    def extract_tags(self, soup, tags):
+        for tag in tags:
+            [s.extract() for s in soup(tag)]
+        return soup
+
+    def clean_text(self, extracted, extract_tags, illegal_tags, illegal_words):
+        text = ""
+        for paragraph in extracted:
+            soup = BeautifulSoup(paragraph, 'html.parser')
+            garbage = False
+
+            if extract_tags is not None:
+                soup = self.extract_tags(soup, extract_tags)
+            if illegal_tags is not None:
+                garbage |= self.find_tags(soup, illegal_tags)
+            if illegal_words is not None:
+                garbage |= self.find_words(soup, illegal_words)
+
+            if not garbage:
+                text += soup.get_text() + "\n"
+
+        return text
 
     def get_url(self, url):
         for downloadLink in self.downloadList:

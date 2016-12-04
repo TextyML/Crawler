@@ -14,7 +14,6 @@ class CNNSpider(NewsSpider):
 
         item = self.get_item(response.url)
 
-
         extractor = {
             "title": "//meta[@property=\"og:title\"]/@content",
             "abstract": "//meta[@property=\"og:description\"]/@content",
@@ -33,19 +32,9 @@ class CNNSpider(NewsSpider):
 
         item["title"] = response.xpath(extractor["title"]).extract()[0]
         item["abstract"] = response.xpath(extractor["abstract"]).extract()[0]
-        text = ""
-
-        for paragraph in response.xpath(pattern["paragraph"]).extract():
-            soup = BeautifulSoup(paragraph, 'html.parser')
-            garbage = False
-            if not any(x in soup.get_text().lower() for x in ["related:", "read:"]):
-                garbage = True
-
-            if soup.find('em'):
-                garbage = True
-
-            if not garbage:
-                text += soup.get_text() + "\n"
-        item["text"] = text
+        item["text"] = self.clean_text(extracted=response.xpath(pattern["paragraph"]).extract(),
+                                       extract_tags=None,
+                                       illegal_tags=['em'],
+                                       illegal_words=["related:", "read:"])
 
         yield item

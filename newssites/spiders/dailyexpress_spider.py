@@ -22,12 +22,9 @@ class DailyExpressSpider(NewsSpider):
 
         item["title"] = response.xpath(pattern["title"]).extract()[0]
         item["abstract"] = response.xpath(pattern["abstract"]).extract()[0]
-        text = ""
-
-        for paragraph in response.xpath(pattern["paragraph"]).extract():
-            soup = BeautifulSoup(paragraph)
-            [s.extract() for s in soup('em')]
-            text += soup.get_text() + "\n"
-        item["text"] = text
+        item["text"] = self.clean_text(extracted=response.xpath(pattern["paragraph"]).extract(),
+                                       extract_tags=['em'],
+                                       illegal_tags=None,
+                                       illegal_words=['●'])
 
         yield item

@@ -20,21 +20,11 @@ class BBCSpider(NewsSpider):
             "paragraph": "//div[contains(@class, 'story-body')]/*/p | //div[contains(@class, 'story-body')]/p"
         }
 
-        item["title"] = response.xpath(pattern["title"]).extract()[0]
+        item["title"] = response.xpath(pattern["title"]).extract()[0].replace(' - BBC News', '')
         item["abstract"] = response.xpath(pattern["abstract"]).extract()[0]
-        text = ""
-
-        for paragraph in response.xpath(pattern["paragraph"]).extract():
-            soup = BeautifulSoup(paragraph)
-            garbage = False
-            if soup.find('i'):
-                garbage = True
-
-            if "follow me on Twitter" in soup.get_text():
-                garbage = True
-
-            if not garbage:
-                text += soup.get_text() + "\n"
-        item["text"] = text
+        item["text"] = self.clean_text(extracted=response.xpath(pattern["paragraph"]).extract(),
+                                       extract_tags=None,
+                                       illegal_tags=['i'],
+                                       illegal_words=["follow me on Twitter"])
 
         yield item
